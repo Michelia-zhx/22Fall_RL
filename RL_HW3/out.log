@@ -1,0 +1,12 @@
+config.env: PongNoFrameskip-v4
+6 (12, 84, 84)
+Traceback (most recent call last):
+  File "code/atari_ddqn_1.py", line 206, in <module>
+    trainer = Trainer(agent, env, config)
+  File "/Users/chrissie/Desktop/强化学习/RL_HW3/code/trainer.py", line 25, in __init__
+    self.board_logger = TensorBoardLogger(self.outputdir)
+  File "/Users/chrissie/Desktop/强化学习/RL_HW3/code/core/logger.py", line 24, in __init__
+    self.writer = tf.compat.v1.summary.FileWriter(log_dir)
+  File "/opt/anaconda3/lib/python3.8/site-packages/tensorflow/python/summary/writer/writer.py", line 359, in __init__
+    raise RuntimeError(
+RuntimeError: v1.summary.FileWriter is not compatible with eager execution. Use `tf.summary.create_file_writer`,or a `with v1.Graph().as_default():` context
